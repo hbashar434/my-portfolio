@@ -6,7 +6,10 @@ body {
   background: #160335;
 }
 .my-text {
-  @apply text-purple-800;
+  @apply text-gray-300;
+}
+.my-text-second {
+  @apply text-gray-200;
 }
 
 .black-gradient {
@@ -60,5 +63,5 @@ body {
 .gradient-border {
   border: 2px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #6e0606, #046604);
+  border-image-source: linear-gradient(to right, #8605c2, #5804f3);
 }
