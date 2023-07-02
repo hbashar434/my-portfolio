@@ -16,8 +16,8 @@ const navLinksData = [
   },
   {
     _id: 1003,
-    title: "Work",
-    link: "work",
+    title: "Projects",
+    link: "projects",
   },
   {
     _id: 1004,
@@ -29,7 +29,7 @@ const navLinksData = [
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="bg-gray-800 px-4 py-5 md:px-24 lg:px-8">
+    <div className="black-gradient px-4 py-5 md:px-24 lg:px-8">
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <li to="/" className="inline-flex items-center">

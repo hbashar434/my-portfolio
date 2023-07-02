@@ -2,6 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-.my-text{
-    @apply text-purple-800
+body {
+  background: #160335;
+}
+.my-text {
+  @apply text-purple-800;
+}
+
+.black-gradient {
+  background: #000000;
+  background: linear-gradient(to right, #280744, #1d0236);
+}
+
+.violet-gradient {
+  background: #804dee;
+  background: linear-gradient(-90deg, #39046b 0%, rgba(33, 7, 88, 0.986) 100%);
+}
+
+.green-pink-gradient {
+  background: "#00cea8";
+  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
+
+.orange-text-gradient {
+  background: #f12711;
+  background: linear-gradient(to top, #f12711, #f5af19);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.green-text-gradient {
+  background: #11998e;
+  background: linear-gradient(to top, #11998e, #38ef7d);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blue-text-gradient {
+  background: #56ccf2;
+  background: linear-gradient(to top, #2f80ed, #56ccf2);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pink-text-gradient {
+  background: #ec008c;
+  background: linear-gradient(to top, #ec008c, #fc6767);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.active {
+  @apply text-white font-semibold;
+}
+
+.gradient-border {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #6e0606, #046604);
 }

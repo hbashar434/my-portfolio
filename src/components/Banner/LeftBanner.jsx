@@ -32,15 +32,15 @@ const LeftBanner = () => {
             cursorColor="#490b6b"
           />
         </h2>
-        <p className=" text-lg leading-6 tracking-wide">
+        <p className=" text-lg leading-6 tracking-wide capitalize my-text-second">
           I have dedicated myself to help clients by delivering cutting-edge web
           solutions that drive them to achieve their digital goals.
         </p>
         <button
           onClick={handleDownload}
-          className="px-4 py-2 bg-purple-900 text-white w-28 rounded"
+          className="px-4 py-2 w-2/4 md:w-1/4 bg-purple-900 text-white rounded"
         >
-          Download
+          Get Resume
         </button>
       </div>
     </div>
