@@ -5,12 +5,14 @@ import tailwind from "../../assets/Icon/tailwind.png";
 import bootstrap from "../../assets/Icon/bootstrap.png";
 import javascript from "../../assets/Icon/javascript.png";
 import reactjs from "../../assets/Icon/reactjs.png";
-import nextjs from "../../assets/Icon/nextjs.png";
+import nextjs from "../../assets/Icon/nextjs.svg";
 import nodejs from "../../assets/Icon/nodejs.png";
 import express from "../../assets/Icon/express.png";
 import mongodb from "../../assets/Icon/mongodb.png";
 import git from "../../assets/Icon/git.png";
 import figma from "../../assets/Icon/figma.png";
+
+import Tilt from "react-parallax-tilt";
 
 const technologies = [
   {
@@ -65,7 +67,18 @@ const technologies = [
 ];
 
 const Skills = () => {
-  return <div></div>;
+  return (
+    <div className="flex flex-wrap gap-8 justify-center items-center md:mx-36">
+      {technologies.map((item) => (
+        <Tilt
+          key={item.name}
+          className="w-24 h-24 flex justify-center items-center bg-gray-300 rounded-lg"
+        >
+          <img src={item.icon} alt="icon" className="h-16 w-16 rounded-md" />
+        </Tilt>
+      ))}
+    </div>
+  );
 };
 
 export default Skills;

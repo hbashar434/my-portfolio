@@ -16,23 +16,23 @@ const ProjectsCard = ({ title, des, src, githubUrl, projectUrl }) => {
         <div className="w-full mt-5 flex flex-col  gap-6">
           <div>
             <div className="flex items-center justify-between">
-              <h3 className="text-base uppercase green-text-gradient font-normal">
+              <h3 className="text-lg font-semibold uppercase my-text">
                 {title}
               </h3>
               <div className="flex gap-2">
                 <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                  <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
+                  <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-purple-900 duration-300 cursor-pointer">
                     <BsGithub />
                   </span>
                 </a>
                 <a href={projectUrl} target="_blank" rel="noopener noreferrer">
-                  <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
+                  <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-blue-900 duration-300 cursor-pointer">
                     <FaGlobe />
                   </span>
                 </a>
               </div>
             </div>
-            <p className="text-sm tracking-wide mt-3 blue-text-gradient duration-300">
+            <p className="text-sm tracking-wide mt-3 my-text-second duration-300">
               {des}
             </p>
           </div>
