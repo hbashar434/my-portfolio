@@ -32,16 +32,20 @@ const ContactForm = () => {
   return (
     <form
       id="myForm"
-      className="md:w-6/12 mx-auto"
+      className=" w-full md:w-6/12 mx-auto"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="mb-2">
-        <label htmlFor="name" className="block mb-1 font-bold text-gray-700">
+        <label
+          htmlFor="name"
+          className="block mb-1 font-semibold my-text-second"
+        >
           Name <span className="text-red-500">*</span>
         </label>
         <input
           type="text"
           id="name"
+          placeholder="Enter your name"
           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
           {...register("name", { required: true })}
         />
@@ -49,12 +53,16 @@ const ContactForm = () => {
       </div>
 
       <div className="mb-2">
-        <label htmlFor="email" className="block mb-1 font-bold text-gray-700">
+        <label
+          htmlFor="email"
+          className="block mb-1 font-semibold my-text-second"
+        >
           Email <span className="text-red-500">*</span>
         </label>
         <input
           type="email"
           id="email"
+          placeholder="Enter your email"
           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
           {...register("email", { required: true })}
         />
@@ -64,12 +72,16 @@ const ContactForm = () => {
       </div>
 
       <div className="mb-2">
-        <label htmlFor="phone" className="block mb-1 font-bold text-gray-700">
+        <label
+          htmlFor="phone"
+          className="block mb-1 font-semibold my-text-second"
+        >
           Phone Number <span className="text-red-500">*</span>
         </label>
         <input
           type="tel"
           id="phone"
+          placeholder="Enter your phone number"
           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
           {...register("phone", { required: true })}
         />
@@ -79,12 +91,16 @@ const ContactForm = () => {
       </div>
 
       <div className="mb-2">
-        <label htmlFor="subject" className="block mb-1 font-bold text-gray-700">
+        <label
+          htmlFor="subject"
+          className="block mb-1 font-semibold my-text-second"
+        >
           Subject <span className="text-red-500">*</span>
         </label>
         <input
           type="text"
           id="subject"
+          placeholder="Enter the subject"
           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
           {...register("subject", { required: true })}
         />
@@ -94,12 +110,16 @@ const ContactForm = () => {
       </div>
 
       <div className="mb-2">
-        <label htmlFor="message" className="block mb-1 font-bold text-gray-700">
+        <label
+          htmlFor="message"
+          className="block mb-1 font-semibold my-text-second"
+        >
           Message <span className="text-red-500">*</span>
         </label>
         <textarea
           id="message"
           name="message"
+          placeholder="Enter your message"
           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
           rows="3"
           {...register("message", { required: true })}

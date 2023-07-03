@@ -29,7 +29,7 @@ const navLinksData = [
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="black-gradient px-4 py-5 md:px-24 lg:px-8">
+    <div className="black-gradient px-4 py-5 md:px-24 lg:px-8 sticky top-0 z-10">
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <li to="/" className="inline-flex items-center">
@@ -71,7 +71,7 @@ const Navbar = () => {
           </button>
           {isMenuOpen && (
             <div className="absolute top-0 left-0 w-full z-10">
-              <div className="p-5 bg-gray-800 border rounded shadow-sm">
+              <div className="p-5 black-gradient border rounded shadow-sm">
                 {/* Logo & Button section */}
                 <div className="flex items-center justify-between mb-4">
                   <div>

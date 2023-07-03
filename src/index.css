@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 body {
-  background: #160335;
+  background: linear-gradient(to bottom right, #100325, #1c0051);
 }
+
 .my-text {
   @apply text-gray-300;
 }
@@ -14,7 +15,7 @@ body {
 
 .black-gradient {
   background: #000000;
-  background: linear-gradient(to right, #280744, #1d0236);
+  background: linear-gradient(to right, #200955, #280744);
 }
 
 .violet-gradient {
@@ -64,4 +65,8 @@ body {
   border: 2px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to right, #8605c2, #5804f3);
+}
+
+.bannerIcon {
+  @apply w-10 h-10 violet-gradient  bg-opacity-25 text-gray-200 text-xl inline-flex items-center justify-center rounded-md shadow-lg hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-indigo-600 cursor-pointer duration-300;
 }
