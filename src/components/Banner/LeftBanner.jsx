@@ -1,6 +1,8 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Media from "../Media/Media";
+import { HiOutlineDownload } from "react-icons/hi";
+import { IconContext } from "react-icons";
 
 const LeftBanner = () => {
   const handleDownload = () => {
@@ -44,7 +46,16 @@ const LeftBanner = () => {
           >
             <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-indigo-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
             <span className="relative text-indigo-600 transition duration-300 group-hover:text-white ease">
-              Get Resume
+              <span className="flex justify-center items-center gap-2">
+                Get Resume{" "}
+                <IconContext.Provider
+                  value={{
+                    className: "animate-bounce duration-300",
+                  }}
+                >
+                  <HiOutlineDownload />
+                </IconContext.Provider>
+              </span>
             </span>
           </button>
           <Media />

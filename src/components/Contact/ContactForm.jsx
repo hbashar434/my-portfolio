@@ -76,18 +76,15 @@ const ContactForm = () => {
           htmlFor="phone"
           className="block mb-1 font-semibold my-text-second"
         >
-          Phone Number <span className="text-red-500">*</span>
+          Phone Number
         </label>
         <input
           type="tel"
           id="phone"
           placeholder="Enter your phone number"
           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
-          {...register("phone", { required: true })}
+          {...register("phone")}
         />
-        {errors.phone && (
-          <span className="text-red-500">Phone number is required</span>
-        )}
       </div>
 
       <div className="mb-2">
@@ -95,18 +92,15 @@ const ContactForm = () => {
           htmlFor="subject"
           className="block mb-1 font-semibold my-text-second"
         >
-          Subject <span className="text-red-500">*</span>
+          Subject
         </label>
         <input
           type="text"
           id="subject"
           placeholder="Enter the subject"
           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
-          {...register("subject", { required: true })}
+          {...register("subject")}
         />
-        {errors.subject && (
-          <span className="text-red-500">Subject is required</span>
-        )}
       </div>
 
       <div className="mb-2">

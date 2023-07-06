@@ -13,6 +13,7 @@ import git from "../../assets/Icon/git.png";
 import figma from "../../assets/Icon/figma.png";
 
 import Tilt from "react-parallax-tilt";
+import Title from "../Title/Title";
 
 const technologies = [
   {
@@ -68,16 +69,19 @@ const technologies = [
 
 const Skills = () => {
   return (
-    <div className="flex flex-wrap gap-8 justify-center items-center md:mx-36">
-      {technologies.map((item) => (
-        <Tilt
-          key={item.name}
-          className="w-24 h-24 flex justify-center items-center bg-gray-300 rounded-lg"
-        >
-          <img src={item.icon} alt="icon" className="h-16 w-16 rounded-md" />
-        </Tilt>
-      ))}
-    </div>
+    <section className="w-full md:px-4 pt-20">
+      <Title title="What I Bring to the Table" des="My Skills." />
+      <div className="flex flex-wrap gap-8 justify-center items-center md:mx-36">
+        {technologies.map((item) => (
+          <Tilt
+            key={item.name}
+            className="w-24 h-24 flex justify-center items-center bg-gray-300 rounded-lg"
+          >
+            <img src={item.icon} alt="icon" className="h-16 w-16 rounded-md" />
+          </Tilt>
+        ))}
+      </div>
+    </section>
   );
 };
 

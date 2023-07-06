@@ -4,7 +4,6 @@ import Title from "../Title/Title";
 import developer from "../../assets/lottie/developer.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Skills from "../Skills/Skills";
 const About = () => {
   useEffect(() => {
     AOS.init({
@@ -15,9 +14,7 @@ const About = () => {
   return (
     <section id="about" className="w-full md:px-4 pt-20">
       <Title title="INTRODUCTION" des="Overview." />
-      <div
-        className="p-4 md:p-8 violet-gradient rounded-md"
-      >
+      <div className="p-4 md:p-8 violet-gradient rounded-md">
         <div
           data-aos="fade-up"
           data-aos-offset="200"
@@ -44,7 +41,6 @@ const About = () => {
             <Lottie className="md:h-80" animationData={developer} loop={true} />
           </div>
         </div>
-        <Skills />
       </div>
     </section>
   );
