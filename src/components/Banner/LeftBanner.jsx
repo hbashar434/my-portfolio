@@ -5,7 +5,7 @@ import { HiOutlineDownload } from "react-icons/hi";
 
 const LeftBanner = () => {
   const handleDownload = () => {
-    const filePath = "/public/resume.pdf";
+    const filePath = "/resume.pdf";
     const link = document.createElement("a");
     link.href = filePath;
     link.download = "Habibul Bashar - Resume";
@@ -46,10 +46,12 @@ const LeftBanner = () => {
             <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-indigo-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
             <span className="relative text-indigo-600 transition duration-300 group-hover:text-white ease">
               <span className="flex justify-center items-center gap-2">
-                Get Resume <HiOutlineDownload className=" animate-bounce duration-300" />
+                Get Resume
+                <HiOutlineDownload className=" animate-bounce duration-300" />
               </span>
             </span>
           </button>
+
           <Media />
         </div>
       </div>
