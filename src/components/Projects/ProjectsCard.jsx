@@ -2,7 +2,14 @@ import React from "react";
 import { BsGithub } from "react-icons/bs";
 import { FaGlobe } from "react-icons/fa";
 
-const ProjectsCard = ({ title, des, src, githubUrl, projectUrl }) => {
+const ProjectsCard = ({
+  title,
+  des,
+  src,
+  githubUrlClient,
+  githubUrlServer,
+  projectUrl,
+}) => {
   return (
     <div className="gradient-border">
       <div className="w-full p-4 xl:px-6 h-auto xl:py-8 flex flex-col violet-gradient group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000">
@@ -20,13 +27,26 @@ const ProjectsCard = ({ title, des, src, githubUrl, projectUrl }) => {
                 {title}
               </h3>
               <div className="flex gap-2">
-                <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                  <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-purple-900 duration-300 cursor-pointer">
+                <a
+                  href={githubUrlClient}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="text-lg w-8 h-8 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-purple-900 duration-300 cursor-pointer">
+                    <BsGithub />
+                  </span>
+                </a>
+                <a
+                  href={githubUrlServer}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="text-lg w-8 h-8 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-purple-900 duration-300 cursor-pointer">
                     <BsGithub />
                   </span>
                 </a>
                 <a href={projectUrl} target="_blank" rel="noopener noreferrer">
-                  <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-blue-900 duration-300 cursor-pointer">
+                  <span className="text-lg w-8 h-8 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-blue-900 duration-300 cursor-pointer">
                     <FaGlobe />
                   </span>
                 </a>

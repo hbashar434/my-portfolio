@@ -8,7 +8,7 @@ const LeftBanner = () => {
     const filePath = "/public/resume.pdf";
     const link = document.createElement("a");
     link.href = filePath;
-    link.download = "Habibul Bashar - Resume.pdf";
+    link.download = "Habibul Bashar - Resume";
     link.click();
   };
 
