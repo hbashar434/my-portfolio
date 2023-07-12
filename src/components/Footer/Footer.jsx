@@ -1,10 +1,10 @@
 import React from "react";
-import { FaFacebook, FaLinkedin, FaDiscord, FaGithub } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaWhatsapp, FaGithub } from "react-icons/fa";
 import { IconContext } from "react-icons";
 
 const linkedinUrl = "https://www.linkedin.com/in/habibulbashar434/";
 const facebookUrl = "https://www.facebook.com/h.bashar434";
-const discordUrl = "https://discord.com/channels/@me/h.bashar";
+const whatsappUrl = "https://wa.me/qr/FNSQ3KOTL3AVH1";
 const githubUrl = "https://github.com/hbashar434";
 
 const Footer = () => {
@@ -51,12 +51,12 @@ const Footer = () => {
                   <FaLinkedin size={32} />
                 </a>
                 <a
-                  href={discordUrl}
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-gray-300"
                 >
-                  <FaDiscord size={32} />
+                  <FaWhatsapp size={32} />
                 </a>
                 <a
                   href={githubUrl}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import html from "../../assets/Icon/html.png";
 import css from "../../assets/Icon/css.png";
 import tailwind from "../../assets/Icon/tailwind.png";
@@ -14,6 +14,9 @@ import figma from "../../assets/Icon/figma.png";
 
 import Tilt from "react-parallax-tilt";
 import Title from "../Title/Title";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const technologies = [
   {
@@ -68,14 +71,26 @@ const technologies = [
 ];
 
 const Skills = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <section className="w-full md:px-4 pt-20">
       <Title title="What I Bring to the Table" des="My Skills." />
-      <div className="flex flex-wrap gap-8 justify-center items-center md:mx-36">
+      <div
+        className="flex flex-wrap gap-8 justify-center items-center md:mx-36"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+      >
         {technologies.map((item) => (
           <Tilt
             key={item.name}
-            className="w-24 h-24 flex justify-center items-center bg-gray-300 rounded-lg"
+            className="w-24 h-24 flex justify-center items-center bg-skill rounded-lg"
           >
             <img src={item.icon} alt="icon" className="h-16 w-16 rounded-md" />
           </Tilt>

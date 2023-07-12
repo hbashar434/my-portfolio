@@ -1,18 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Title from "../Title/Title";
 import ProjectsCard from "./ProjectsCard";
 import project1 from "../../assets/projects/photographySchool.png";
 import project2 from "../../assets/projects/curiousKids.png";
 import project3 from "../../assets/projects/chef.png";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Projects = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
-    <section id="projects" className="w-full px-4 py-20">
+    <section id="projects" className="w-full md:px-4 py-20">
       <Title
         title="VISIT MY PROJECTS AND KEEP YOUR FEEDBACK"
         des="My Projects."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14 px-4 md:px-0"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+      >
         <ProjectsCard
           title="Photography School"
           des="Capturing moments through the lens, our photography school project explores the art of visual storytelling, equipping aspiring photographers with technical skills and creative vision to bring their imaginations to life!"

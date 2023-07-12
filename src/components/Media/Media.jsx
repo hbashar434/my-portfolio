@@ -1,10 +1,10 @@
 import React from "react";
-import { FaFacebookF, FaDiscord, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
 
 const Media = () => {
   const linkedinUrl = "https://www.linkedin.com/in/habibulbashar434/";
   const facebookUrl = "https://www.facebook.com/h.bashar434";
-  const discordUrl = "https://discord.com/channels/@me/h.bashar";
+  const whatsappUrl = "https://wa.me/qr/FNSQ3KOTL3AVH1";
 
   return (
     <div>
@@ -27,12 +27,12 @@ const Media = () => {
           <FaFacebookF />
         </a>
         <a
-          href={discordUrl}
+          href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="bannerIcon"
         >
-          <FaDiscord />
+          <FaWhatsapp />
         </a>
       </div>
     </div>

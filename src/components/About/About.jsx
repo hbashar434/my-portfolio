@@ -15,14 +15,14 @@ const About = () => {
     <section id="about" className="w-full md:px-4 pt-20">
       <Title title="INTRODUCTION" des="Overview." />
       <div className="p-4 md:p-8 violet-gradient rounded-md">
-        <div
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-easing="linear"
-          data-aos-duration="1000"
-          className="w-full md:px-4 py-5 flex flex-col gap-5 xl:gap-0 md:flex-row justify-center"
-        >
-          <p className="my-text-second text-lg md:w-1/2">
+        <div className="w-full md:px-4 py-5 flex flex-col gap-5 xl:gap-0 md:flex-row justify-center overflow-hidden">
+          <p
+            className="my-text-second text-lg md:w-1/2"
+            data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
             I am currently in my final year pursuing a Bachelor of Science
             degree in Computer Science at the Institute of Science and
             Technology. I&apos;m a skilled web developer with expertise in
@@ -37,7 +37,13 @@ const About = () => {
             nature or diving into the pages of a good book. Let&apos;s work
             together to bring your ideas to life!
           </p>
-          <div className=" md:w-1/2">
+          <div
+            className=" md:w-1/2"
+            data-aos="fade-left"
+            data-aos-offset="200"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
             <Lottie className="md:h-80" animationData={developer} loop={true} />
           </div>
         </div>

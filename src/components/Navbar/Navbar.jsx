@@ -32,12 +32,19 @@ const Navbar = () => {
     <div className="black-gradient px-4 py-5 md:px-24 lg:px-8 sticky top-0 z-10">
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
-        <li to="/" className="inline-flex items-center">
+        <Link
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="inline-flex items-center cursor-pointer"
+        >
           <img src={logo} alt="logo" className="w-8 h-8" />
-          <span className="ml-2 text-xl font-bold tracking-wide text-gray-200">
+          <span className="ml-2 text-lg font-bold tracking-wide text-gray-200">
             | Habibul Bashar
           </span>
-        </li>
+        </Link>
 
         {/* Nav Items Section */}
         <ul className="items-center hidden space-x-8 lg:flex">

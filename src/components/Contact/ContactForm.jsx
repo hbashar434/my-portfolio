@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import { FaTelegramPlane } from "react-icons/fa";
+import Swal from "sweetalert2";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ContactForm = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   const {
     register,
     handleSubmit,
@@ -20,19 +31,27 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           reset();
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "I will respond ASAP.",
+            showConfirmButton: false,
+            timer: 1500,
+          });
         },
-        (error) => {
-          console.log(error.text);
-        }
+        (error) => {}
       );
   };
 
   return (
     <form
       id="myForm"
-      className=" w-full md:w-6/12 mx-auto"
+      className=" w-full md:w-[500px] mx-auto"
+      data-aos="fade-up-left"
+      data-aos-offset="200"
+      data-aos-easing="linear"
+      data-aos-duration="1000"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="mb-2">
@@ -45,6 +64,7 @@ const ContactForm = () => {
         <input
           type="text"
           id="name"
+          name="name"
           placeholder="Enter your name"
           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
           {...register("name", { required: true })}
@@ -62,6 +82,7 @@ const ContactForm = () => {
         <input
           type="email"
           id="email"
+          name="email"
           placeholder="Enter your email"
           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
           {...register("email", { required: true })}
@@ -69,6 +90,23 @@ const ContactForm = () => {
         {errors.email && (
           <span className="text-red-500">Email is required</span>
         )}
+      </div>
+
+      <div className="mb-2">
+        <label
+          htmlFor="subject"
+          className="block mb-1 font-semibold my-text-second"
+        >
+          Subject
+        </label>
+        <input
+          type="text"
+          name="subject"
+          id="subject"
+          placeholder="Enter the subject"
+          className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+          {...register("subject")}
+        />
       </div>
 
       <div className="mb-2">
@@ -81,25 +119,10 @@ const ContactForm = () => {
         <input
           type="tel"
           id="phone"
+          name="phone"
           placeholder="Enter your phone number"
           className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
           {...register("phone")}
-        />
-      </div>
-
-      <div className="mb-2">
-        <label
-          htmlFor="subject"
-          className="block mb-1 font-semibold my-text-second"
-        >
-          Subject
-        </label>
-        <input
-          type="text"
-          id="subject"
-          placeholder="Enter the subject"
-          className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
-          {...register("subject")}
         />
       </div>
 
@@ -129,7 +152,10 @@ const ContactForm = () => {
       >
         <span className="absolute w-[900px] h-0 transition-all duration-300 origin-center rotate-45 -translate-x-72 bg-indigo-600 top-1/2 group-hover:h-[500px] group-hover:-translate-y-32 ease"></span>
         <span className="relative text-indigo-600 transition duration-300 group-hover:text-white ease">
-          Send Message
+          <span className="flex justify-center items-center gap-2">
+            Send Message
+            <FaTelegramPlane className=" animate-pulse duration-300" />
+          </span>
         </span>
       </button>
     </form>
